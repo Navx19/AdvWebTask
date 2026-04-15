@@ -20,7 +20,6 @@ export class CourseController {
   }
 
   @Post()
-<<<<<<< HEAD
   createCourse(@Body() dto: CreateCourseDto) {
     return this.courseService.createCourse(dto);
   }
@@ -33,20 +32,6 @@ export class CourseController {
   @Patch(':id')
   patchCourse(@Param('id') id: string, @Body() dto: UpdateCourseDto) {
     return this.courseService.patchCourse(id, dto);
-=======
-  createCourse(CreateCourseDto: CreateCourseDto) {
-    return this.courseService.createCourse(CreateCourseDto);
-  }
-
-  @Put(':id')
-  updateCourse(@Param('id') id: string,updateCourseDto: UpdateCourseDto) {
-    return this.courseService.updateCourse(id, updateCourseDto);
-  }
-
-  @Patch(':id')
-  patchCourse(@Param('id') id: string, patchCourseDto: UpdateCourseDto) {
-    return this.courseService.patchCourse(id, patchCourseDto);
->>>>>>> 966e660b872eb941a4fca54170a33cbc650ac741
   }
 
   @Delete(':id')
@@ -54,24 +39,6 @@ export class CourseController {
     return this.courseService.deleteCourse(id);
   }
 
-<<<<<<< HEAD
-=======
-  @Post()
-create(@Body() dto: CreateCourseDto) {
-return this.courseService.createCourse(dto);
-}
-
-@Put(':id')
-update(@Param('id') id: string, @Body() dto: UpdateCourseDto) {
-  return this.courseService.updateCourse(id, dto);
-}
-
-@Patch(':id')
-patch(@Param('id') id: string, @Body() dto: UpdateCourseDto) {
-  return this.courseService.patchCourse(id, dto);
-}
-
->>>>>>> 966e660b872eb941a4fca54170a33cbc650ac741
 @Post(':id/upload')
 @UseInterceptors(
   FileInterceptor('file', {
